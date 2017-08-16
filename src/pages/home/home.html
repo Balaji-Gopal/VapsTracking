@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar [hideBackButton]="true">
+        <ion-title (click)="refreshMap()">
+            Welcome, {{welcomeName}}
+        </ion-title>
+        <ion-buttons end class="m-r-sml">
+            <button ion-button icon-only (click)="presentPopover($event)">
+              <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-fab class="home-fab">
+        <button ion-fab (click)="refreshMap()" class="home-fab-bttn"><img class="home-fab-icon-img"src="assets/img/refresh_48.png"/></button>
+    </ion-fab>
+    <div class="home-unitname">
+        <span>{{unitname}}</span>
+    </div>
+    <div #map id="map" style="border:0;width:100%;height:100%;"></div>
+</ion-content>
+
+<ion-footer>
+    <ion-row class="m-t-smd" style="background-color: #EEEEEE;">
+        <ion-col style="width:25%">
+            <button ion-button full style="background-color: #EEEEEE;box-shadow: none;color:black;font-size: 10px;" (click)="dial()">
+                <img src="assets/img/call_d_36.png" style="width: 30%;"/>
+                <span style="padding:5%">Dial</span>
+            </button>
+        </ion-col>
+        <ion-col style="width:25%">
+            <button ion-button full style="background-color: #EEEEEE;box-shadow: none;color:black;font-size: 10px;" (click)="sendWhatsappMsg()">
+                <img src="assets/img/whatsapp_36.png" style="width: 30%;"/>
+                <span style="padding:5%">Whatsapp</span>
+            </button>
+        </ion-col>
+        <ion-col style="width:25%">
+            <button ion-button full style="background-color: #EEEEEE;box-shadow: none;color:black;font-size: 10px;" (click)="sendSMS()">
+                <img src="assets/img/message_36.png" style="width: 30%;"/>
+                <span style="padding:5%">Message</span>
+            </button>
+        </ion-col>
+        <ion-col style="width:25%">
+            <button ion-button full style="background-color: #EEEEEE;box-shadow: none;color:black;font-size: 10px;" (click)="sendPanicSMS()">
+                <img src="assets/img/panic_36.png" style="width: 30%;"/>
+                <span style="padding:5%">Panic</span>
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

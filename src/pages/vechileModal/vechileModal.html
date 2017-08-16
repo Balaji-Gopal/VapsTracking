@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title style="text-align: center;"><span style="font-size: 14px;font-weight: bold;">Vechile Details</span> </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card-content>
+        <ion-item>
+            <label style="font-size: 10px;font-weight: bold;float: left;width: 30%;">Vechile Number:</label>
+            <label style="font-size: 10px;float: right;width: 60%;text-align: center;white-space: normal;">{{details.unitname}}</label>
+        </ion-item>
+        <ion-item>
+            <label style="font-size: 10px;font-weight: bold;float: left; width: 30%;">Report Time:</label>
+            <label style="font-size: 10px;float: right;width: 60%;text-align: center;white-space: normal;">{{details.reporttime}}</label>
+        </ion-item>
+        <ion-item>
+            <label style="font-size: 10px;font-weight: bold;float: left;width: 30%;">Vechile Status:</label>
+            <label style="font-size: 10px;float: right;width: 60%;text-align: center;white-space: normal;">{{details.vehstatus}}</label>
+        </ion-item>
+        <ion-item>
+            <label style="font-size: 10px;font-weight: bold;float: left;width: 30%;">Vechile Location:</label>
+            <label style="font-size: 10px;float: right;width: 60%;text-align: center;white-space: normal;">{{details.location}}</label>
+        </ion-item>
+    </ion-card-content>
+</ion-content>
+
+<ion-footer>
+    <ion-row class="m-t-smd">
+        <ion-col style="padding:0px;margin:0px">
+            <button class="r" style="margin: 0px;padding: 0px;" ion-button full (click)="closeModal()"> Ok </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

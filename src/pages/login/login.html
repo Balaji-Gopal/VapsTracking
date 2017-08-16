@@ -1,0 +1,27 @@
+<ion-nav swipeBackEnabled="false"></ion-nav>
+<ion-content class="login-page">
+    <div class="logo p-v-lg" text-center>
+        <!-- p-h-xmd-->
+        <img src="assets/img/ic_320.png" class="w-64">
+    </div>
+    <div class="login-here">
+        <span>Login Here</span>
+    </div>
+    <ion-card class="login-card">
+        <form [formGroup]="user" (ngSubmit)="loginMe()" class="login-form">
+            <ion-list no-lines class="login-list">
+                <ion-item class="login-item">
+                    <ion-label floating class="ion-float-label">Enter LiteTrac ID</ion-label>
+                    <ion-input type="number" formControlName="trackId"></ion-input>
+                </ion-item>
+                <ion-item class="login-item">
+                    <ion-label floating class="ion-float-label">Enter Server Name</ion-label>
+                    <ion-input type="text" formControlName="serverName"></ion-input>
+                </ion-item>
+                <ion-item class="login-item">
+                    <button ion-button [disabled]="loginDisabled" type="submit" block class="bold text-sm login-bttn">Login</button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-card>
+</ion-content>
